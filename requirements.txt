@@ -1,0 +1,7 @@
+mysql-connector
+flask
+flask_restx
+flask_cors
+waitress
+flask-jwt-extended
+pandas

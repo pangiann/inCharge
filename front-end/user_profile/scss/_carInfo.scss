@@ -1,0 +1,83 @@
+.carInfo {
+    margin-bottom: 2rem;
+    padding-left: 1.24rem;
+    padding-right: 1.24rem;
+    &__card {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        min-width: min-content;
+        display: grid;
+        //grid-template-columns: 492px;
+        //grid-template-rows: 210px 210px 80px;
+        grid-template-areas: "image" "text" "stats";
+        border-radius: 0.3125rem;
+        background: white;
+        //box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+        font-family: Arial, Helvetica, sans-serif;
+
+
+    }
+    .card-image {
+        grid-area: image;
+        height: 210px;
+
+    }
+    .card-text {
+        grid-area: text;
+    }
+    .card-stats {
+        grid-area: stats; 
+    }
+
+    .card-image {
+        grid-area: image;
+        background: url("../../images/car.jpg");
+        border-top-left-radius: 0.2125rem;
+        border-top-right-radius: 0.2125rem;
+        background-size: cover;
+    }
+
+    .card-text {
+        grid-area: text;
+        margin: 25px;
+        color: $darkBlue;
+    }
+    .card-text .date {
+        color: rgb(255, 7, 110);
+        font-size:13px;
+    }
+    .card-text p {
+        color: gray;
+        font-size:15px;
+        font-weight: 300;
+    }
+    .card-text h2 {
+        margin-top:0px;
+        font-size:28px;
+    }
+
+    .card-stats {
+        grid-area: stats; 
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        border-bottom-left-radius: 0.2125rem;
+        border-bottom-right-radius: 0.2125rem;
+        background: #fab90a;
+        .stat {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+            padding:10px;
+            color: $darkBlue;
+
+        }
+    }
+   
+
+
+}

@@ -1,0 +1,205 @@
+
+.choices {
+
+    @include breakpoint-down(small) {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #282828;
+
+
+    }
+    @include breakpoint-up(medium) {
+        height: auto;
+        box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
+        border-radius: 0.3125rem;
+        overflow: hidden;
+        margin-right: 2rem;
+
+    }
+    .container {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        margin-left: 1.3rem;
+        margin-right: 1.3rem;
+        align-items: center;
+    
+    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__first {
+        
+        flex: 1;
+        margin-right: 4rem;
+        //background-image: url('../../images/stat.png');
+        text-align: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        svg {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+       
+        border-radius: 50%;
+        p { 
+            
+            margin-bottom: 0px;
+            margin-top: -4px;
+            text-align: center;
+            color: #999999;
+            font-size: 12px;
+        }
+        @include breakpoint-up(medium) {
+            svg {
+                width: 3rem;
+                height: 3rem;
+            }
+            //margin-top: -25px;
+            p { 
+                
+                margin-bottom: 0px;
+                margin-top: -5px;
+                text-align: center;
+                color: #999;
+                font-size: 20px;
+            }
+        }
+        .cls-1 {
+            fill: #999999;
+        }
+
+
+    }
+    
+    &__second {
+        flex: 1;
+        margin-right: 4rem;
+        text-align: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        svg {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+       
+        border-radius: 50%;
+        p { 
+            
+            margin-bottom: 0px;
+            margin-top: -4px;
+            text-align: center;
+            color: #999999;
+            font-size: 12px;
+        }
+        @include breakpoint-up(medium) {
+            svg {
+                width: 3rem;
+                height: 3rem;
+            }
+            //margin-top: -25px;
+            p { 
+                
+                margin-bottom: 0px;
+                margin-top: -5px;
+                text-align: center;
+                color: #999;
+                font-size: 20px;
+            }
+        }
+
+        .cls-2 {
+            fill: #999999;
+        }
+
+    }
+
+    &__third {
+        flex: 1;
+        margin-right: 4rem;
+
+        text-align: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+       
+        svg {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+        //margin-top: -25px;
+        p { 
+            
+            margin-bottom: 0px;
+            margin-top: -5px;
+            text-align: center;
+            color: #999;
+            font-size: 12px;
+        }
+        @include breakpoint-up(medium) {
+            svg {
+                width: 3rem;
+                height: 3rem;
+            }
+            //margin-top: -25px;
+            p { 
+                
+                margin-bottom: 0px;
+                margin-top: -5px;
+                text-align: center;
+                color: #999;
+                font-size: 20px;
+            }
+        }
+        border-radius: 50%;
+        .st1 {
+            fill: #999;
+            stroke: #3D4446;
+            
+        }
+        
+    }
+    &__fourth {
+        flex: 1;
+        text-align: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+       
+        svg {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+        //margin-top: -25px;
+        p { 
+            
+            margin-bottom: 0px;
+            margin-top: -5px;
+            text-align: center;
+            color: #fab90a;
+            font-size: 12px;
+        }
+        @include breakpoint-up(medium) {
+            svg {
+                width: 3rem;
+                height: 3rem;
+            }
+            //margin-top: -25px;
+            p { 
+                
+                margin-bottom: 0px;
+                margin-top: -5px;
+                text-align: center;
+                color: #fab90a;
+                font-size: 20px;
+            }
+        }
+        border-radius: 50%;
+       
+
+    }
+}

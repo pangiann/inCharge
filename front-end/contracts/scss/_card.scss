@@ -1,0 +1,100 @@
+.choices {
+    background-color: $veryLightGray;
+    padding-right: 24px;
+
+    padding-left: 24px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.choice {
+    &__content {
+        //width: fit-content;
+    }
+    &__circle {
+        width: 100%;
+        height: 200px;
+        text-align: center;
+        background-color: #fab90a;
+        clip-path: circle(180px at center 0);
+
+    }
+    &__top {
+        text-align: center;
+        padding: 1rem 1.875rem 2rem 1.875rem;
+        color: $darkBlue;
+        font-size: 1.8625rem;
+        line-height: 1;
+    }
+  
+    &__price {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 600;;
+        color: $darkBlue;
+    }
+
+    &__grid {
+        display: grid;
+        gap: 2.3rem;
+        //grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        grid-template-columns: 1fr;
+
+        @include breakpoint-up(medium) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include breakpoint-up(large) {
+             grid-template-columns: repeat(4, 1fr);
+        }
+
+    }
+
+    &__item {
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
+        border-radius: 0.3125rem;
+        overflow: hidden;
+        transition: all 150ms ease-in-out;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+       
+    }
+  
+
+    &__text {
+        text-align: center;
+        padding: 1.2rem 1.2rem 1rem 1.2rem;
+        @include breakpoint-up(medium) {
+            padding: 1.875rem 1.5625rem 
+        }
+
+    }
+    &__title {
+        color: $darkBlue;
+        font-size: 1.5625rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        
+
+    }
+    &__description {
+        color: $grayishBlue;
+        font-size: 0.81rem;
+
+    }
+    &__button {
+        flex: 1;
+        text-align: center;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+   
+}

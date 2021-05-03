@@ -1,0 +1,145 @@
+.hero {
+    
+        width: 100%;
+        background-image:url('../images/Home-customerreview_new.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: auto;
+        padding-top: 7.5625rem;
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+        padding-bottom: 13.75rem;
+
+        
+    
+
+    &__form {
+        display: block;
+        margin-bottom: 10rem;
+        //width: 22.6875rem;
+       // height: 0.65rem;
+        padding-top: 2rem;
+        padding-left: 2.3rem;
+        padding-right: 2.3rem;
+        padding-bottom: 3.375rem;
+        background-color: $white;
+        box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
+        border-radius: 0.5125rem;
+        overflow: hidden;
+        @include breakpoint-up(medium) {
+           
+            width: 450px;
+            
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+        @include breakpoint-up(large) {
+            
+            width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 3.325rem;
+            padding-right: 3.325rem;
+
+        }
+
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        font-size: 1.38rem;
+        text-align: center;
+        border-bottom: 2px solid #fab90a;
+
+
+        .log {
+
+            flex: 1;
+            padding-bottom: 0.8rem;
+            color: #fab90a;
+            font-weight: 700;
+
+        }
+
+        .reg {
+            flex: 1;
+            padding-bottom: 0.9rem;
+            font-weight: 300;
+            color: $darkBlue
+
+            
+
+            
+
+        }
+        a {
+            color: #fab90a;
+            
+            
+
+        }
+        
+
+    }
+
+    &__fill {
+        margin-top: 1.1rem;
+            
+        .field-icon {
+       
+            background-position: center center;
+            float: right;
+            margin-right: 5px;
+            margin-top: -30px;
+            position: relative;
+            width: 20px; 
+            height: 20px;
+            z-index: 1;
+
+        }
+
+        input[type=text], input[type=password], select, textarea{
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+
+        input[type=text]:focus, input[type=password]:focus {
+            border: 1px solid #000;
+        }
+          
+          /* Style the label to display next to the inputs */
+        label {
+            padding:  0;
+            padding-left: 2px;
+            font-size: 1rem;
+            display: inline-block;
+        }
+
+    }
+
+    &__bottom {
+        display: block;
+        align-items: center;
+        font-size: 1.5rem;
+        padding-top: 2rem;
+        text-align: center;
+
+        width: 100%;
+        a {
+            color: $darkBlue;
+            font-size: 1.3rem;
+
+        }
+        .button {
+            border-radius: 0.7rem;
+        }
+    }
+
+}

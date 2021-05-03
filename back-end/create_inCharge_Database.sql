@@ -24,25 +24,26 @@ set FOREIGN_KEY_CHECKS = 1 ;
 -- Table structure for table `customer`
 --
 CREATE TABLE `customer` (
-	`Customer_No` int(11) NOT NULL,						-- Primary Key
-	`First_Name` varchar(20) NOT NULL,
+	`Username` varchar(50) NOT NULL,				-- Primary Key
+	`Car_ID` varchar(100) NOT NULL,					-- Foreign Key
+    `Password` varbinary(50) NOT NULL,
+    `Salt` varbinary(50) NOT NULL,
+    `First_Name` varchar(20) NOT NULL,
     `Last_Name` varchar(20) NOT NULL,
-    `Password` varchar(60) NOT NULL,
     `Points` int(11) DEFAULT NULL,
     `Birth_Date` date NOT NULL,
     `City` varchar(20) DEFAULT NULL,
-    `Street_Name` varchar(20) DEFAULT NULL,
+    `Street_Name` varchar(40) DEFAULT NULL,
     `Street_Number` int(11) DEFAULT NULL,
     `Postal_Code` int(11) DEFAULT NULL,
     `Family_Members` varchar(20) DEFAULT NULL,
     `Email` varchar(50) DEFAULT NULL,
     `Phone` bigint(21) DEFAULT NULL
-    
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 --
 -- Dumping data for table `customer`
---
--- MAYBE DUMP DATA HERE
+-- dump data in inCharge_Data_Insertion
+
 
 --
 -- Trigger_1 `customer`
@@ -50,7 +51,7 @@ CREATE TABLE `customer` (
 DELIMITER $$
 CREATE TRIGGER `Customer_family_state` BEFORE INSERT ON `customer`
 FOR EACH ROW BEGIN
-		IF (NEW.Family_Members is NULL OR NEW.Family_Members = '') 
+		IF (NEW.Family_Members is NULL OR NEW.Family_Members = '')
         THEN
 			SET NEW.Family_Members = 'Unknown';
 	END IF;
@@ -63,7 +64,7 @@ DELIMITER ;
 DELIMITER $$
 CREATE TRIGGER `Customer_points` BEFORE INSERT ON `customer`
 FOR EACH ROW BEGIN
-		IF (NEW.POINTS is NULL) 
+		IF (NEW.POINTS is NULL)
         THEN
 			SET NEW.POINTS = 0;
 	END IF;
@@ -76,15 +77,35 @@ DELIMITER ;
 --
 -- Table structure for table `administrator`
 --
+CREATE TABLE `superadmin` (
+	`Superadmin_ID` varchar(50) NOT NULL,						-- Primary Key
+    `Password` varbinary(50) NOT NULL,
+    `Salt` varbinary(50) NOT NULL,
+		`First_Name` varchar(20) NOT NULL,
+    `Last_Name` varchar(20) NOT NULL,
+    `Email` varchar(50) DEFAULT NULL,
+    `Phone` bigint(21) DEFAULT NULL,
+		PRIMARY KEY (`Superadmin_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+--
+-- Dumping data for table `administrator`
+-- dump data in inCharge_Data_Insertion
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+--
+-- Table structure for table `administrator`
+--
 CREATE TABLE `administrator` (
-	`Administrator_No` int(11) NOT NULL,					-- Primary Key
+	`Administrator_No` varchar(50) NOT NULL,						-- Primary Key
+    `Password` varbinary(50) NOT NULL,
+    `Salt` varbinary(50) NOT NULL,
 	`First_Name` varchar(20) NOT NULL,
     `Last_Name` varchar(20) NOT NULL,
-    `Password` varchar(60) NOT NULL,
     `Birth_Date` date NOT NULL,
-    `Working_Company` varchar(50) NOT NULL,
+    `Working_Company` varchar(50) NOT NULL,			-- Foreign Key -> will be distributors PK
     `City` varchar(20) DEFAULT NULL,
-    `Street_Name` varchar(20) DEFAULT NULL,
+    `Street_Name` varchar(40) DEFAULT NULL,
     `Street_Number` int(11) DEFAULT NULL,
     `Postal_Code` int(11) DEFAULT NULL,
     `Family_Members` varchar(20) DEFAULT NULL,
@@ -93,8 +114,7 @@ CREATE TABLE `administrator` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 --
 -- Dumping data for table `administrator`
---
--- MAYBE DUMP DATA HERE
+-- dump data in inCharge_Data_Insertion
 
 --
 -- Trigger `administrator`
@@ -102,7 +122,7 @@ CREATE TABLE `administrator` (
 DELIMITER $$
 CREATE TRIGGER `Administrator_family_state` BEFORE INSERT ON `administrator`
 FOR EACH ROW BEGIN
-		IF (NEW.Family_Members is NULL OR NEW.Family_Members = '') 
+		IF (NEW.Family_Members is NULL OR NEW.Family_Members = '')
         THEN
 			SET NEW.Family_Members = 'Unknown';
 	END IF;
@@ -116,13 +136,15 @@ DELIMITER ;
 -- Table structure for table `boss`
 --
 CREATE TABLE `boss` (
-	`Boss_No` int(11) NOT NULL,							-- Primary Key
+	`Boss_No` varchar(50) NOT NULL,							-- Primary Key
+    `Password` varbinary(50) NOT NULL,
+    `Salt` varbinary(50) NOT NULL,
 	`First_Name` varchar(20) NOT NULL,
     `Last_Name` varchar(20) NOT NULL,
-    `Password` varchar (60) NOT NULL,
-    `Birth_Date` date NOT NULL,
+    `Birth_Date` date DEFAULT NULL,
+    `Working_Company` varchar(50) NOT NULL,			-- Foreign Key -> will be distributors PK
     `City` varchar(20) DEFAULT NULL,
-    `Street_Name` varchar(20) DEFAULT NULL,
+    `Street_Name` varchar(40) DEFAULT NULL,
     `Street_Number` int(11) DEFAULT NULL,
     `Postal_Code` int(11) DEFAULT NULL,
     `Family_Members` varchar(20) DEFAULT NULL,
@@ -131,8 +153,7 @@ CREATE TABLE `boss` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 --
 -- Dumping data for table `Boss`
---
--- MAYBE DUMP DATA HERE
+-- dump data in inCharge_Data_Insertion
 
 --
 -- Trigger `boss`
@@ -140,7 +161,7 @@ CREATE TABLE `boss` (
 DELIMITER $$
 CREATE TRIGGER `Boss_family_state` BEFORE INSERT ON `boss`
 FOR EACH ROW BEGIN
-		IF (NEW.Family_Members is NULL OR NEW.Family_Members = '') 
+		IF (NEW.Family_Members is NULL OR NEW.Family_Members = '')
         THEN
 			SET NEW.Family_Members = 'Unknown';
 	END IF;
@@ -155,20 +176,16 @@ DELIMITER ;
 -- Table structure for table `car`
 --
 CREATE TABLE `car` (
-	`Car_No` bigint(21) NOT NULL,						-- Primary Key
-    `Car_Owner_ID` int(11) NOT NULL,					-- Foreign Key
-    `Manufacturer_ID` varchar(50) NOT NULL,				-- Foreign Key
-	`Brand` varchar(20) NOT NULL,
-    `Model` varchar(20) NOT NULL,
-    `Capacitance` decimal(7,2) NOT NULL,
-    `Year` int(11) DEFAULT NULL,
-    `Price` int(11) DEFAULT NULL
+	`car_No` varchar(100) NOT NULL,						-- Primary Key
+	`brand` varchar(20) NOT NULL,						-- Foreign Key
+    `model` varchar(20) NOT NULL,
+		`type` varchar(10) NOT NULL,
+    `capacitance` decimal(7,2) NOT NULL,
+    `release_year` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 --
 -- Dumping data for table `Car`
---
--- MAYBE DUMP DATA HERE
-
+-- dump data in inCharge_Data_Insertion
 
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 
@@ -176,40 +193,40 @@ CREATE TABLE `car` (
 -- Table structure for table `manufacturer`
 --
 CREATE TABLE `manufacturer` (
-	`Manufacturer_Name` varchar(50) NOT NULL,			-- Primary Key
+	`Brand_Name` varchar(50) NOT NULL,			-- Primary Key
 	`City` varchar(20) DEFAULT NULL,
-    `Street_Name` varchar(20) DEFAULT NULL,
-    `Street_Number` int(11) DEFAULT NULL,
+    `Street_Name` varchar(40) DEFAULT NULL,
+    `Streen_Number` int(11) DEFAULT NULL,
     `Postal_Code` int(11) DEFAULT NULL,
     `Email` varchar(50) DEFAULT NULL,
     `Phone` bigint(21) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 --
 -- Dumping data for table `Car_Manufacturer`
---
--- MAYBE DUMP DATA HERE
-
+-- dump data in inCharge_Data_Insertion
 
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 
 --
--- Table structure for table `transaction`
+-- Table structure for table `charging_session`
 --
-CREATE TABLE `transaction` (
-	`Transaction_No` int(11) NOT NULL,					-- Primary Key
-    `Customer_ID` int(11) NOT NULL,						-- Foreign Key
-    `Station_ID` int(11) NOT NULL,						-- Foreign Key
-	`Type` varchar(20) NOT NULL,
+CREATE TABLE `charging_session` (
+	`Session_No` int(11) NOT NULL AUTO_INCREMENT,		-- Primary Key
+    `Customer_ID` varchar(50) NOT NULL,					-- Foreign Key
+    `Point_ID` varchar(50) NOT NULL,					-- Foreign Key
+		`Protocol` varchar(50) NOT NULL,
+		`Type` varchar(20) NOT NULL,
     `Points` int(11) NOT NULL,
     `Date` date NOT NULL,
-    `Time` time NOT NULL,
-    `Amount` decimal(7,2) NOT NULL
+    `Start_Time` time NOT NULL,
+    `End_Time` time NOT NULL,
+    `Amount` decimal(7,2) NOT NULL,
+    `Energy` decimal(9,2) NOT NULL,
+    PRIMARY KEY (Session_No)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 --
--- Dumping data for table `Transaction`
---
--- MAYBE DUMP DATA HERE
-
+-- Dumping data for table `charging_session`
+-- dump data in inCharge_Data_Insertion
 
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 
@@ -217,18 +234,31 @@ CREATE TABLE `transaction` (
 -- Table structure for table `charging_station`
 --
 CREATE TABLE `charging_station` (
-	`Station_No` int(11) NOT NULL,						-- Primary Key
-    `Distributor_ID` varchar(50) NOT NULL,				-- Foreign Key
+	`Station_No` varchar(50) NOT NULL,					-- Primary Key
 	`City` varchar(20) NOT NULL,
 	`Street` varchar(20) NOT NULL,
-    `Charging_Rate` decimal(7,2) NOT NULL,
-    `Cost_per_KW` decimal(7,2) NOT NULL
+	`Number` int(11) NOT NULL,
+    `Operator` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 --
 -- Dumping data for table `Charging_Station`
---
--- MAYBE DUMP DATA HERE
+-- dump data in inCharge_Data_Insertion
 
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+--
+-- Table structure for table `charging_point`
+--
+CREATE TABLE `charging_point` (
+	`Point_No` varchar(50) NOT NULL,						-- Primary Key
+    `Distributor_ID` varchar(50) NOT NULL,					-- Foreign Key
+    `Station_ID` varchar(50) NOT NULL,						-- Foreign Key
+    `Charging_Rate` decimal(7,2) NOT NULL,			-- this is KWh per minute
+    `Cost_per_KWh` decimal(7,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+--
+-- Dumping data for table `Charging_Station`
+-- dump data in inCharge_Data_Insertion
 
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 
@@ -238,19 +268,37 @@ CREATE TABLE `charging_station` (
 CREATE TABLE `distributor` (
 	`Distributor_Name` varchar(50) NOT NULL,			-- Primary Key
     `Producer_ID` varchar(50) NOT NULL,					-- Foreign Key
-    `KW_Price` decimal(7,2) NOT NULL,
+    `KWh_Price` decimal(7,2) NOT NULL,
+    `Contract` decimal(7,2) DEFAULT NULL,
 	`City` varchar(20) DEFAULT NULL,
-	`Street_Name` varchar(20) DEFAULT NULL,
+	`Street_Name` varchar(40) DEFAULT NULL,
     `Street_Number` int(11) DEFAULT NULL,
     `Postal_Code` int(11) DEFAULT NULL,
     `Email` varchar(50) DEFAULT NULL,
+    `Webpage` varchar(100) DEFAULT NULL,
     `Phone` bigint(21) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 --
 -- Dumping data for table `Electricity_Distributor`
---
--- MAYBE DUMP DATA HERE
+-- dump data in inCharge_Data_Insertion
 
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+--
+-- Table structure for table `subscription`
+--
+CREATE TABLE `subscription` (
+	`Subscription_No` int(11) NOT NULL AUTO_INCREMENT,				-- Primary Key
+    `Customer_ID` varchar(50) NOT NULL, 							-- Foreign Key
+    `Supplier_ID` varchar(50) NOT NULL,								-- Foreign Key
+    `Price` decimal(7,2) NOT NULL,
+    `Last_paid` date DEFAULT NULL,
+    `Last_issued` date DEFAULT NULL,
+    PRIMARY KEY (`Subscription_No`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+--
+-- Dumping data for table `Subscription`
+-- dump data in inCharge_Data_Insertion
 
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
 
@@ -260,7 +308,7 @@ CREATE TABLE `distributor` (
 CREATE TABLE `producer` (
 	`Producer_Name` varchar(50) NOT NULL,				-- Primary Key
 	`City` varchar(20) DEFAULT NULL,
-	`Street_Name` varchar(20) DEFAULT NULL,
+	`Street_Name` varchar(40) DEFAULT NULL,
     `Street_Number` int(11) DEFAULT NULL,
     `Postal_Code` int(11) DEFAULT NULL,
     `Email` varchar(50) DEFAULT NULL,
@@ -268,8 +316,7 @@ CREATE TABLE `producer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 --
 -- Dumping data for table `Electricity_Producer`
---
--- MAYBE DUMP DATA HERE
+-- dump data in inCharge_Data_Insertion
 
 -- -- -- -- -- -- -- -- -- -- -- --  -- -- -- -- -- -- -- -- -- -- -- --
 -- -- -- -- -- -- -- -- -- -- Primary Keys -- -- -- -- -- -- -- -- -- --
@@ -277,43 +324,43 @@ CREATE TABLE `producer` (
 -- Indexes for table `customer`
 --
 ALTER TABLE `customer`
-	ADD PRIMARY KEY (`Customer_No`);
+	ADD PRIMARY KEY (`Username`);
 
 --
 -- Indexes for table `administrator`
 --
 ALTER TABLE `administrator`
 	ADD PRIMARY KEY (`Administrator_No`);
-    
+
 --
 -- Indexes for table `boss`
 --
 ALTER TABLE `boss`
 	ADD PRIMARY KEY (`Boss_No`);
-  
+
 --
 -- Indexes for table `car`
 --
 ALTER TABLE `car`
-	ADD PRIMARY KEY (`Car_No`);
+	ADD PRIMARY KEY (`car_No`);
 
 --
 -- Indexes for table `manufacturer`
 --
 ALTER TABLE `manufacturer`
-	ADD PRIMARY KEY (`Manufacturer_Name`);
-
---
--- Indexes for table `transaction`
---
-ALTER TABLE `transaction`
-	ADD PRIMARY KEY (`Transaction_No`);
+	ADD PRIMARY KEY (`Brand_Name`);
 
 --
 -- Indexes for table `charging_station`
 --
 ALTER TABLE `charging_station`
 	ADD PRIMARY KEY (`Station_No`);
+
+--
+-- Indexes for table `charging_point`
+--
+ALTER TABLE `charging_point`
+	ADD PRIMARY KEY (`Point_No`);
 
 --
 -- Indexes for table `electricity_distributor`
@@ -326,49 +373,84 @@ ALTER TABLE `distributor`
 --
 ALTER TABLE `producer`
 	ADD PRIMARY KEY (`Producer_Name`);
-    
+
 -- -- -- -- -- -- -- -- -- -- -- --  -- -- -- -- -- -- -- -- -- -- -- --
--- -- -- -- -- -- -- -- -- -- Foreign Keys -- -- -- -- -- -- -- -- -- --    
+-- -- -- -- -- -- -- -- -- -- Foreign Keys -- -- -- -- -- -- -- -- -- --
 
 --
--- Constraints for table `car` 
+-- Constraints for table `customer`
+--
+ALTER TABLE `customer`
+    ADD CONSTRAINT `FK_Car_Owner_ID` FOREIGN KEY
+    (`Car_ID`) REFERENCES `car` (`Car_No`)
+    ON DELETE CASCADE;
+
+--
+-- Constraints for table `administrator`
+--
+ALTER TABLE `administrator`
+    ADD CONSTRAINT `FK_Working_Company_Admin` FOREIGN KEY
+    (`Working_Company`) REFERENCES `distributor` (`Distributor_Name`)
+    ON DELETE CASCADE;
+
+--
+-- Constraints for table `boss`
+--
+ALTER TABLE `boss`
+    ADD CONSTRAINT `FK_Working_Company_Boss` FOREIGN KEY
+    (`Working_Company`) REFERENCES `distributor` (`Distributor_Name`)
+    ON DELETE CASCADE;
+
+--
+-- Constraints for table `car`
 --
 ALTER TABLE `car`
-    ADD CONSTRAINT `FK_Car_Owner_ID` FOREIGN KEY
-    (`Car_Owner_ID`) REFERENCES `customer` (`Customer_No`) 
-    ON DELETE CASCADE,
-    ADD CONSTRAINT `FK_Manufacturer_ID` FOREIGN KEY
-    (`Manufacturer_ID`) REFERENCES `manufacturer` (`Manufacturer_Name`) 
+    ADD CONSTRAINT `FK_Brand` FOREIGN KEY
+    (`brand`) REFERENCES `manufacturer` (`Brand_Name`)
     ON DELETE CASCADE;
-    
+
 --
--- Constraints for table `transaction` 
+-- Constraints for table `charging_session`
 --
-ALTER TABLE `transaction`
+ALTER TABLE `charging_session`
     ADD CONSTRAINT `FK_Customer_ID` FOREIGN KEY
-    (`Customer_ID`) REFERENCES `customer` (`Customer_No`) 
+    (`Customer_ID`) REFERENCES `customer` (`Username`)
+    ON DELETE CASCADE,
+    ADD CONSTRAINT `FK_Point_ID` FOREIGN KEY
+    (`Point_ID`) REFERENCES `charging_point` (`Point_No`)
+    ON DELETE CASCADE;
+
+--
+-- Constraints for table `charging_point`
+--
+ALTER TABLE `charging_point`
+    ADD CONSTRAINT `FK_Distributor_ID` FOREIGN KEY
+    (`Distributor_ID`) REFERENCES `distributor` (`Distributor_Name`)
     ON DELETE CASCADE,
     ADD CONSTRAINT `FK_Station_ID` FOREIGN KEY
-    (`Station_ID`) REFERENCES `charging_station` (`Station_No`) 
+    (`Station_ID`) REFERENCES `charging_station` (`Station_No`)
     ON DELETE CASCADE;
-    
+
 --
--- Constraints for table `charging_station` 
---
-ALTER TABLE `charging_station`
-    ADD CONSTRAINT `FK_Distributor_ID` FOREIGN KEY
-    (`Distributor_ID`) REFERENCES `distributor` (`Distributor_Name`) 
-    ON DELETE CASCADE;
-    
---
--- Constraints for table `distributor` 
+-- Constraints for table `distributor`
 --
 ALTER TABLE `distributor`
     ADD CONSTRAINT `FK_Producer_ID` FOREIGN KEY
-    (`Producer_ID`) REFERENCES `producer` (`Producer_Name`) 
+    (`Producer_ID`) REFERENCES `producer` (`Producer_Name`)
     ON DELETE CASCADE;
 
--- ------------------------------------------------------------------    
+--
+-- Constraionts for table `subscription`
+--
+ALTER TABLE `subscription`
+	ADD CONSTRAINT `FK_Customer_IF` FOREIGN KEY
+    (`Customer_ID`) REFERENCES `customer` (`Username`)
+    ON DELETE CASCADE,
+    ADD CONSTRAINT `FK_Supplier_ID` FOREIGN KEY
+    (`Supplier_ID`) REFERENCES `distributor` (`Distributor_Name`)
+    ON DELETE CASCADE;
+
+-- ------------------------------------------------------------------
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

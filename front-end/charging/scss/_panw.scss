@@ -1,0 +1,47 @@
+.panw {
+    &__text {
+        text-align: center;
+        margin-bottom: 2.2rem;
+        h1 {
+            font-weight: 300;
+            font-size: 30px;
+            line-height: 1.15;
+            color: $darkBlue;
+        
+            max-width: 480px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 3rem;
+            @include breakpoint-up(large) {
+                font-size: 45px;
+                max-width: 880px;
+            }
+        }
+
+        p {
+            line-height: 1.5;
+            font-size: 16px;
+            margin-top: 3.2rem;
+            @include breakpoint-up(large) {
+                margin-top: 6.2rem;
+            }
+        }
+    }
+
+    &__image {
+        width: 100%;
+        background-image:url('../images/car.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 32.5rem; //280px
+        height: auto;
+        margin-top: 1.2rem;
+        margin-bottom: 1.2rem;
+        @include breakpoint-up(large) {
+            margin-top: 6.2rem;
+            margin-bottom: 2.2rem;
+        }
+
+    }
+}

@@ -1,0 +1,14 @@
+.circle {
+    @include breakpoint-up(large) {
+        
+        padding: 30px 80px 100px;
+
+        &__one{
+
+            width: 25px;
+            height: 25px;
+            background:$darkBlue;
+            border-radius: 50%;
+        }
+    }
+}

@@ -1,0 +1,107 @@
+.hero {
+    width: 100%;
+    height: auto;
+    padding-top: 1rem;
+    margin-bottom: 2.3rem;
+    padding-left: 1.24rem;
+    padding-right: 1.24rem;
+    border-radius: 18px;
+    @include breakpoint-up(medium) {
+        padding: 1rem 2.5rem; 
+        height: auto;
+        max-width: 600px;;
+        overflow: hidden;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+       
+        
+
+    }
+    &__background {
+        background-color: $veryLightGray;
+        border: 1px solid #dadce0;
+
+        box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
+        border-radius: 0.3125rem;
+        
+    }
+    &__title {
+
+        display: flex; 
+        
+        .bullet {
+            flex: 1;
+            
+            margin-left: 0.8rem;
+            margin-top: 0.5rem;
+                
+        
+            &__one{
+    
+                width: 4px;
+                height: 18px;
+                background: $darkBlue;
+                border-radius: 35%;
+                @include breakpoint-up(large) {
+                    width: 8px;
+                    height: 33px;
+                    margin-top: 0.4rem;
+                }
+            }
+        
+        }
+
+        h3 {
+            flex: 20;
+            margin-top: 0.5rem;
+            font-size: 1rem;
+            color: $darkBlue;
+            align-self: start;
+            justify-content: start;
+            @include breakpoint-up(large) {
+                font-size: 2.2rem;
+            }
+
+        }
+
+
+
+    }
+    &__info {
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        margin-left: 2rem; 
+        margin-right: 2rem;
+        .circle {
+            flex: 1;
+            
+            margin-top: 3px;
+            
+        
+            &__one{
+    
+                width: 5px;
+                height: 5px;
+                background: $darkBlue;
+                border-radius: 60%;
+            }
+        
+        }
+
+        p {
+            flex: 22;
+            font-size: 0.8rem;
+            font-family: Arial, Helvetica, sans-serif;
+            
+            color: $darkBlue;
+            @include breakpoint-up(large) {
+                font-size: 1rem;
+            }
+
+        }
+       
+    }
+    
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="scss/style.css">
+	<link rel="icon" type="image/x-icon" href="images/favicon.png">
+
+	<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap" rel="stylesheet">
+	<title>InCharge</title>
+</head>
+<script type='text/javascript' src="../file.js" > 
+</script>
+<body onload=show_contracts()>
+    <header class="header">
+        <div class="overlay has-fade hide-for-desktop"></div>
+        <nav class="container container--nav container--pall flex flex-jc-sb flex-ai-c">
+            <a href="/" class="header__logo">
+                <img src="../images/driverslogo.png" alt="inCharge" />
+            </a>
+    
+            <a id="btnHamburger" href="#" class="header__toggle hide-for-desktop">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+    
+            <div class="header__links hide-for-mobile">
+                <div class="Drivers">Contracts</div>				
+            </div>
+    
+            <div class="header__buttons hide-for-mobile">
+                <a href="../user_profile/" class=" hide-for-mobile" id="user"></a>
+				<a href="#" class="hide-for-mobile" onclick="logout()">Logout</a>            </div>
+        </nav>
+    </header>
+    <div class="header__menu has-fade hide-for-desktop">
+
+        <a href="#">Home</a>
+        <a href="../web-drivers/">Drivers</a>
+        <a href="../web-business/index.html">Business</a>
+        <a href="../user_profile/" id="user2"></a>
+        <a href="#" onclick="logout()">Logout</a>
+    </div>
+
+
+</div>
+    <section class="choices">
+
+		<div class="choice__content container container--nav container--pall">
+		
+			<div class="choice__grid">
+
+				
+				
+			</div>
+		</div>
+
+	</section>
+    <script src="js/script.js"></script>
+</body>

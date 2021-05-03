@@ -1,0 +1,48 @@
+.desktop_flex {
+    @include breakpoint-up(medium) {
+        display: grid;
+        margin-left: 3rem;
+        margin-right: 3rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        align-items: center;
+        justify-content: center;
+    }
+    @include breakpoint-down(medium) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr;
+
+    }
+    .hero {
+        @include breakpoint-up(medium) {
+            order: 2;
+            align-self: center;
+        }
+        @include breakpoint-down(medium) {
+            order: 1;
+            grid-column: 1;
+        }
+
+    }
+    .subInfo {
+        @include breakpoint-up(medium) {
+            flex: 1;
+            order:1;
+
+        }
+        @include breakpoint-down(medium) {
+            order: 1;
+            
+        }
+    }
+    .carInfo {
+        @include breakpoint-up(medium) {
+            order: 3;
+        }
+        @include breakpoint-down(medium) {
+            order: 2;
+        }
+    }
+
+
+}

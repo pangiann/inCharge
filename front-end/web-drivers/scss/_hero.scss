@@ -1,0 +1,102 @@
+.hero {
+    @include breakpoint-up(large) {
+        display: flex;
+        align-items: center;
+
+    }
+    &__image {
+        background-image:url('../images/haha.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 20.5rem; //280px
+        @include breakpoint-up(large) {
+            flex: 3;
+            order: 2;
+            height: 37rem;
+            margin-bottom: 2.2rem;
+        }
+    }
+    
+
+    &__text {
+        text-align: center;
+        
+        h1 {
+            font-weight: 300;
+            font-size: 2rem;
+            line-height: 1.15;
+            color: $darkBlue;
+            margin-bottom: 1.5rem;
+            margin-top:10px;
+            @include breakpoint-up(large) {
+                font-size: 2.9rem;
+            }
+        }
+
+        p {
+            line-height: 1.5;
+            margin-bottom: 2.2rem;
+        }
+        @include breakpoint-up(large) {
+            flex: 2;
+            order: 1;
+            text-align: left;  
+            padding: 70px;
+            
+
+        }
+        
+
+    }
+
+
+
+    &__image2 {
+        background-image:url('../images/DriversMain-Content-Slider1.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 20.5rem; //280px
+        margin-bottom: 30px;
+        @include breakpoint-up(large) {
+            flex: 3;
+            order: 1;
+            height: 37rem;
+            margin-left: 10px;
+            margin-bottom: 2.2rem;
+
+        }
+    }
+    &__text2 {
+        text-align: center;
+        
+        h1 {
+            font-weight: 300;
+            font-size: 2rem;
+            line-height: 1.15;
+            color: $darkBlue;
+            margin-bottom: 1.5rem;
+            margin-top:10px;
+            @include breakpoint-up(large) {
+                font-size: 2.9rem;
+            }
+        }
+
+        p {
+            line-height: 1.5;
+            margin-bottom: 2.2rem;
+        }
+        @include breakpoint-up(large) {
+            flex: 3;
+            order: 2;
+            text-align: left;  
+            padding: 150px;
+            
+
+        }
+        
+
+    }
+
+}

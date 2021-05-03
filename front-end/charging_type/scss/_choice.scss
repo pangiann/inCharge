@@ -1,0 +1,126 @@
+.choices {
+    
+    background-color: $veryLightGray;
+    padding-bottom: 30rem;
+    padding-right: 50px;
+    padding-top: 3rem;
+    padding-left: 50px;
+}
+
+.choice {
+
+    &__content {
+        position: relative;
+       
+    }
+    
+   
+   
+    &__flex {
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        top: 0px;
+        left: 0px;
+        @include breakpoint-up(medium) {
+            display: flex;
+            align-items: center;
+            align-content: center;
+            left: auto;
+            right: auto;
+        }
+        .labels {
+            padding-top: 2rem;
+            @include breakpoint-up(medium) { 
+                flex: 1;
+                margin-left: 5rem;
+            }
+            display: inline-block;
+            margin-top: 2rem;
+            width: 100%;
+            margin-bottom: 5rem;
+            text-align: center;
+        }
+        
+        input,
+        label {
+            font: inherit;
+            width: 5.3ch;
+        }
+        input:invalid {
+            border-color: red;
+        }
+
+        #cont {
+            padding-top: 2rem;
+            
+            @include breakpoint-up(medium) { 
+               margin: 3rem;
+            }
+            pointer-events: none;
+            margin: 1.5rem;
+            #but {
+                background-color: gray;
+            }
+        }
+        #cont2 {
+            padding-top: 2rem;
+            
+            @include breakpoint-up(medium) { 
+               margin: 3rem;
+            }
+            pointer-events: none;
+            margin: 1.5rem;
+            #but2 {
+                background-color: gray;
+            }
+        }
+        
+    }
+    &__item {
+        flex: 1;
+        display: block;
+        box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
+        border-radius: 0.3125rem;
+        overflow: hidden;
+        transition: all 150ms ease-in-out;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+       
+    }
+    &__image {
+        height: 13rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        @include breakpoint-up(large) { 
+           height: 15rem;
+        }
+    }
+
+    &__text {
+        text-align: center;
+        padding: 1.875rem 1.875rem 2.5rem 1.875rem;
+        @include breakpoint-up(medium) {
+            padding: 1.875rem 1.5625rem 
+        }
+
+    }
+    &__title {
+        color: $darkBlue;
+        font-size: 1.0625rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+
+    }
+    &__description {
+        color: $grayishBlue;
+        font-size: 0.81rem;
+
+    }
+    
+   
+}

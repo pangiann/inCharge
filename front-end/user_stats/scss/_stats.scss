@@ -1,0 +1,123 @@
+.stats {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    //margin:0 !important;
+    .container {
+        text-align: center;
+    }
+    .select_flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        #years {
+            width: 40%;
+            padding: 8px;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+            text-align:left;
+            margin-left: 1rem;
+            border: 0px;
+            outline: none;
+            box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
+           // border-bottom: 1px solid #fab90a;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: white;
+            color: #282828;
+            @include breakpoint-down(small) {
+                padding: 8px;
+                
+            }
+        } 
+        #way {
+            width: 40%;
+            padding: 8px;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+            text-align:left;
+            margin-left: 1rem;
+            border: 0px;
+            outline: none;
+            box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
+
+            //border-bottom: 1px solid #fab90a;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: white;
+            color: #282828;
+            @include breakpoint-down(small) {
+                padding: 8px;
+                
+            }
+
+        }
+    }
+    #years_way {
+        width: 40%;
+        padding: 8px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+        text-align:left;
+        
+        border: 0px;
+        outline: none;
+        //border-bottom: 1px solid #fab90a;
+        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+
+        border-radius: 4px;
+        box-sizing: border-box;
+        //background-color:#282828;
+        //color: white;
+        background-color: white;
+        color: $darkBlue;
+        @include breakpoint-down(small) {
+            padding: 8px;
+            
+        }
+
+    }
+    #piechart {
+        display: block;;
+        text-align: center;
+      
+        width: 100%; 
+        min-height: 400px;
+    }
+      
+       #div_chart {
+        display: inline-block;
+        width: 100%; 
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        min-height: 400px;
+    }
+    .mo1, .mo2 {
+        padding: 8px;
+        max-width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+
+        //height: fit-content;
+        margin-bottom: 0.5rem;
+        //margin-top: -1rem;
+        text-align: center;
+       
+       // box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+        //background-color: $grayishBlue;
+        //border-radius: 20px;
+        //box-sizing: border-box;
+    }
+    p {
+        //color: black;
+        padding: 0rem;
+        margin: 0;
+        
+    }
+    h3 {
+        color: black;
+        margin: 0;
+    }
+}

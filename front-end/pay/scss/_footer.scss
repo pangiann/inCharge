@@ -1,0 +1,132 @@
+.footer {
+    //background-color: $darkBlue;
+    background-color: #f9a602;
+    color: #000000;
+    padding: 2.5rem;
+    text-align: center;
+
+    .container--nav {
+        @include breakpoint-up(large) {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 3fr;
+            grid-template-rows: 1fr auto;
+            grid-template-areas: 
+              "logo links1 links2 cta"
+              "social links1 links2 cta";
+            gap: 1rem;
+            justify-items: start;
+        }
+    }
+
+    a {
+        color: #000000;
+    }
+    &__logo {
+        font-weight: 700;
+        font-size: 1.5rem;
+        display: inline-block;
+        @include breakpoint-down(medium) {
+            margin-bottom: 1.875rem;
+
+
+        }
+        @include breakpoint-up(large) {
+            grid-area: logo;
+        }
+
+    }
+
+    &__social {
+       
+        @include breakpoint-down(medium) {
+            margin-bottom: 1.875rem;
+
+
+        }
+       
+        @include breakpoint-up(large) {
+            grid-area: social;
+            align-self: end;
+        }
+
+        a {      
+            display: inline-block;
+            height: 1.25rem;
+      
+            svg path {
+              transition: fill 150ms ease-in-out;
+            }
+      
+            &:hover svg path {
+              fill: #ab3642;
+            }
+        }
+
+        a:not(:last-child) {
+            display: inline-block;
+            margin-right: 1rem;
+        }
+
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.9375rem;
+       
+        @include breakpoint-up(large) {
+            align-items: start;
+            justify-content: space-between;
+        }
+        &.col1 {
+            @include breakpoint-up(large) {
+                grid-area: links1;
+            }
+
+        }
+        &.col2 {
+            @include breakpoint-down(medium) {
+                margin-bottom: 1.875rem;
+    
+    
+            }
+            @include breakpoint-up(large) {
+                grid-area: links2;
+            }
+        }
+
+        a {
+            line-height: 2.25;
+            transition: color 150ms ease-in-out;
+            
+            &:hover {
+                color: #ab3642;
+            }
+        }
+
+        
+    }
+    &__cta {
+        @include breakpoint-up(large) {
+            grid-area: cta;
+            justify-self: end;
+            text-align: right;
+            align-self: end;
+
+        }
+
+
+    }
+    &__copyright {
+        
+        font-size: 0.8125rem;
+        color: $darkBlue;
+        font-size: 15px;
+        
+
+
+    }
+
+
+}

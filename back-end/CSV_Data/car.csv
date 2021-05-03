@@ -1,0 +1,75 @@
+"car_No","brand","model","type","capacitance","release_year"
+"0742668c-bf59-4191-890e-2b0883508808","BMW","i3","BEV",37.9,0
+"0742668c-bf59-4191-890e-2b0883508809","BMW","X5","PHEV",21.0,2020
+"171a1e6d-8cbc-41a9-a8bb-e05b7ee98889","Maxus","EV80","BEV",56.0,2018
+"2e55ea02-c829-4256-94fd-ffc971a1dd8e","Volvo","XC 60 T8","PHEV",10.4,2018
+"3291e5ba-862c-49fa-8437-71105743875e","Fiat","500e","BEV",19.2,2014
+"3337d5f0-39de-4ded-831b-843dfec1ebbd","Kia","e-niro","BEV",39.0,2018
+"3337d5f0-39de-4ded-831b-843dfec1ebbe","Kia","Soul","BEV",27.0,0
+"3337d5f0-39de-4ded-831b-843dfec1ebbf","Kia","e-Soul","BEV",39.0,2019
+"3337d5f0-39de-4ded-831b-843dfec1ebbg","Kia","e-Niro","BEV",64.0,2018
+"3337d5f0-39de-4ded-831b-843dfec1ebbh","Kia","Ceed SW","PHEV",8.9,2020
+"3337d5f0-39de-4ded-831b-843dfec1ebbi","Kia","XCeed","PHEV",8.9,2020
+"3337d5f0-39de-4ded-831b-843dfec1ebbj","Kia","Niro","PHEV",8.9,2020
+"3500fb3e-bd2c-478e-ae5e-ac9ee490594b","Opel","Ampera e","BEV",60.0,2017
+"3500fb3e-bd2c-478e-ae5e-ac9ee490594c","Opel","Ampera e-Pionier","BEV",10.6,2012
+"3500fb3e-bd2c-478e-ae5e-ac9ee490594d","Opel","Corsa-e","BEV",47.5,2020
+"37bfdacf-1aca-4eb7-8daa-8dc5b14c59e8","DS","7 Crossback","PHEV",13.2,2020
+"37bfdacf-1aca-4eb7-8daa-8dc5b14c59e9","DS","3 Crossback E-Tense","BEV",46.0,2020
+"391f000f-d9d1-4c13-b744-95f0b9c8a2e1","Polestar","2","BEV",72.5,2020
+"3b3fc191-f4c3-45da-bc3b-21efbe1b264f","Citroen","C-Zero","BEV",14.5,0
+"3b3fc191-f4c3-45da-bc3b-21efbe1b264g","Citroen","Berlingo Electric","BEV",22.5,0
+"3cf8cf51-60ac-4cac-9f25-131c21eda12e","Mitsubishi","i-Miev","BEV",14.5,0
+"3cf8cf51-60ac-4cac-9f25-131c21eda12f","Mitsubishi","Outlander PHEV","PHEV",11.0,2018
+"43763587-6999-406b-8843-28977e1b82c3","Skoda","CITIGOe iV","BEV",32.3,2020
+"43763587-6999-406b-8843-28977e1b82c4","Skoda","Superb iV","PHEV",13.0,2020
+"43763587-6999-406b-8843-28977e1b82c5","Skoda","Enyaq iV","BEV",58.0,2020
+"481793f5-c8b0-4dc9-b3d4-cc615085ac07","Volkswagen","e-Golf","BEV",31.5,2017
+"481793f5-c8b0-4dc9-b3d4-cc615085ac08","Volkswagen","e-up","BEV",16.5,2013
+"481793f5-c8b0-4dc9-b3d4-cc615085ac09","Volkswagen","ID.3","BEV",45.0,2020
+"481793f5-c8b0-4dc9-b3d4-cc615085ac10","Volkswagen","Golf GTE","PHEV",8.7,2017
+"481793f5-c8b0-4dc9-b3d4-cc615085ac11","Volkswagen","Passat GTE","PHEV",13.1,2019
+"5663b87a-d940-4bab-9846-d74c8c0ae260","MG","ZS EV","BEV",44.5,2020
+"61fc79a2-04ca-418e-9333-caf5f67ba02f","Jaguar","i-Pace","BEV",84.0,0
+"68e11a25-d316-4d22-9444-45c7306c8ab7","Porsche","Taycan","BEV",83.7,2020
+"6cf9e9b6-28aa-44c7-b6c3-438d518ac12f","Ford","Focus electric","BEV",33.5,2017
+"6cf9e9b6-28aa-44c7-b6c3-438d518ac12g","Ford","Kuga","PHEV",14.4,2020
+"6d9d9248-de4a-4b13-976b-4e9f6688b0b1","Mini","Countryman ALL4","PHEV",7.6,2019
+"6d9d9248-de4a-4b13-976b-4e9f6688b0b2","Mini","Cooper SE","BEV",28.9,2020
+"771bb157-23a2-4917-908c-810d241718d5","e.GO Mobile","Life 60","BEV",21.0,2019
+"771bb157-23a2-4917-908c-810d241718d6","e.GO Mobile","Life 40","BEV",17.5,2019
+"771bb157-23a2-4917-908c-810d241718d7","e.GO Mobile","Life 20","BEV",14.5,2019
+"89c2668c-0c50-4344-9386-93e4000f7673","Audi","e-tron 55","BEV",86.5,2019
+"89c2668c-0c50-4344-9386-93e4000f7674","Audi","e-tron 50","BEV",65.0,2019
+"89c2668c-0c50-4344-9386-93e4000f7675","Audi","A3 40 e-tron","PHEV",8.8,2020
+"91c527ff-aa74-4dbb-9091-36fb5ddd44b6","Seat","Mii Electric","BEV",32.3,2020
+"9771afb8-9e25-4ae6-a5b3-b2a5b9f363f0","Hyundai","Kona","BEV",39.2,2018
+"9771afb8-9e25-4ae6-a5b3-b2a5b9f363f1","Hyundai","Ioniq","BEV",28.0,2016
+"97d0d03a-63c6-4f33-99d7-6e944f71d7c5","Artega","Karo","BEV",14.4,2020
+"9b829849-1219-48b8-964e-90ddc1a4fa85","Mazda","MX-30","BEV",32.0,2020
+"9ca5e092-76e2-4868-afc1-c06abeedf81b","Honda","e","BEV",32.0,2020
+"a43d2607-eead-46c2-9fd5-2ebd3c49d895","Aiways","U5","BEV",63.0,2020
+"a462c115-33b4-438b-b590-bc4a33382d1c","Smart","fortwo ED","BEV",17.6,0
+"a462c115-33b4-438b-b590-bc4a33382d1d","Smart","fortwo EQ","BEV",17.6,0
+"a462c115-33b4-438b-b590-bc4a33382d1e","Smart","forfour EQ","BEV",17.6,0
+"b2282fbe-f5d9-48d9-943f-a9b66ec51423","Mercedes Benz","EQC","BEV",80.0,2019
+"b2282fbe-f5d9-48d9-943f-a9b66ec51424","Mercedes Benz","B-Klasse","BEV",28.0,0
+"b2282fbe-f5d9-48d9-943f-a9b66ec51425","Mercedes Benz","A 250 e","PHEV",10.7,2020
+"b2282fbe-f5d9-48d9-943f-a9b66ec51426","Mercedes Benz","GLC 300 de 4MATIC","PHEV",13.5,2020
+"b2282fbe-f5d9-48d9-943f-a9b66ec51427","Mercedes Benz","GLE","PHEV",31.2,2020
+"c0d8a60c-34b8-44fe-8af7-9eeb62eedb4b","Renault","Zoe","BEV",22.0,2013
+"c0d8a60c-34b8-44fe-8af7-9eeb62eedb4c","Renault","Kangoo ZE","BEV",33.0,0
+"c0d8a60c-34b8-44fe-8af7-9eeb62eedb4d","Renault","Twizy","BEV",6.1,0
+"c0d8a60c-34b8-44fe-8af7-9eeb62eedb4e","Renault","Captur E-Tech","PHEV",9.8,2020
+"cbca5847-9b23-47d9-80d3-24fa9a8ca21a","Chevrolet","Bolt","BEV",58.0,2017
+"cbca5847-9b23-47d9-80d3-24fa9a8ca21b","Chevrolet","Spark EV","BEV",21.3,2013
+"dab5a47a-e8ce-4d34-9139-0701499205b1","Nissan","e-NV 200","BEV",24.0,0
+"dab5a47a-e8ce-4d34-9139-0701499205b2","Nissan","Leaf","BEV",62.0,2019
+"f37896c3-6bc5-45e1-b442-b9cbc38e3a7c","Tesla","Model 3","BEV",74.0,0
+"f37896c3-6bc5-45e1-b442-b9cbc38e3a7d","Tesla","Model S","BEV",95.0,0
+"f37896c3-6bc5-45e1-b442-b9cbc38e3a7e","Tesla","Model X","BEV",99.9,2017
+"f458fe7d-f545-45f3-8c23-2ab8140b8b5d","Peugeot","I-on","BEV",14.5,0
+"f458fe7d-f545-45f3-8c23-2ab8140b8b5e","Peugeot","e-208","BEV",47.5,2020
+"f458fe7d-f545-45f3-8c23-2ab8140b8b5f","Peugeot","e-2008","BEV",47.5,2020
+"f458fe7d-f545-45f3-8c23-2ab8140b8b5g","Peugeot","3008","PHEV",11.2,2020
+"f458fe7d-f545-45f3-8c23-2ab8140b8b5h","Peugeot","Partner","BEV",22.5,0

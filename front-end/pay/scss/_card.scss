@@ -1,0 +1,285 @@
+
+.pay {
+   
+    width: 100%;
+    background-image:url('../../images/Home-customerreview_new.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: auto;
+    padding-top: 7.5625rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    padding-bottom: 13.75rem;
+    
+    &__total {
+        display: flex;
+        h2 {
+            color: $darkBlue;
+        }
+        h2 {
+            margin-left: 1rem;
+            text-align: center;
+            margin-top: 0.2rem;
+            color: $darkBlue;
+        }
+    }
+    &__form {
+        display: block;
+        margin-bottom: 10rem;
+        //width: 22.6875rem;
+       // height: 33rem;
+        padding-top: 2rem;
+        padding-left: 2.325rem;
+        padding-right: 2.325rem;
+        padding-bottom: 3.375rem;
+        background-color: $white;
+        box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
+        border-radius: 0.5125rem;
+        overflow: hidden;
+        @include breakpoint-up(medium) {
+           
+            width: 450px;
+            
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+        @include breakpoint-up(large) {
+            
+            width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 3.3rem;
+            padding-right: 3.3rem;
+
+        }
+
+    }
+    &__paypal {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;;
+        border-bottom: 1.2px solid $darkBlue;
+        .left {
+            flex: 1;
+            //justify-content: center;
+            align-items: center;;
+            display: flex;
+            label {
+                margin-left: 1rem;
+                font-size: 1rem;
+                cursor: pointer;
+                font-weight: 700;
+                letter-spacing: 0.5px;
+                color: $darkBlue;
+            }
+
+        }
+        .right {
+            
+            img {
+                width: 62px;
+                height: 40px;
+                margin-left: 10px;
+
+            }
+        }
+        
+        
+        
+    }
+    &__credit {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;;
+        padding-bottom: 0.5rem;
+        border-bottom: 1.2px solid $darkBlue;
+        .left {
+            flex: 1;
+            //justify-content: center;
+            align-items: center;;
+            display: flex;
+            label {
+                margin-left: 1rem;
+                font-size: 1rem;
+                cursor: pointer;
+                font-weight: 700;
+                letter-spacing: 0.5px;
+                color: $darkBlue;
+            }
+
+        }
+        .right {
+            
+            img {
+                width: 32px;
+                height: 20px;
+                margin-left: 10px;
+
+            }
+        }
+
+    }
+
+    
+    &__cardholder {
+        margin-bottom: 1.5rem;;
+        padding-bottom: 0.5rem;
+        border-bottom: 1.2px solid $darkBlue;
+        .info {
+            display: flex;
+            label {
+                display: inline-block;
+                letter-spacing: 0.5px;
+                
+                color: $darkBlue;
+                width: 100px;
+
+            }
+            input{
+                display: inline-block;
+                max-width: 300px;
+                width: 300px;
+                background-color: transparent;
+                font-family: 'Lato' sans-serif;
+                border: none;
+                outline: none;
+                margin-left: 50px;
+                color: $darkBlue;
+            }
+        }
+       
+
+    }
+    &__number {
+        margin-bottom: 1.5rem;;
+        padding-bottom: 0.5rem;
+        border-bottom: 1.2px solid $darkBlue;
+        .info {
+            display: flex;
+
+            label {
+                display: inline-block;
+                letter-spacing: 0.5px;
+                color: $darkBlue;
+                width: 100px;
+
+            }
+            input{
+                display: inline-block;
+                max-width: 300px;
+                width: 300px;
+                background-color: transparent;
+                font-family: 'Lato' sans-serif;
+                border: none;
+                outline: none;
+                margin-left: 50px;
+                color: $darkBlue;
+            }
+        }
+       
+
+    }
+
+    &__details {
+        margin-bottom: 1.5rem;;
+        padding-bottom: 0.5rem;
+        border-bottom: 1.2px solid $darkBlue;
+        .left {
+            display: flex;
+            
+            label {
+                letter-spacing: 0.5px;
+                color: $darkBlue;
+                width: 100px;
+                margin-right: 20px;
+                
+
+            }
+            
+            select {
+                font-family: 'Lato' sans-serif;
+                cursor: pointer;
+                appearance: none;
+                background: transparent;
+                border: none;
+                outline: none;
+                color: $darkBlue;
+            }
+            span {
+                width: fit-content;
+                font-family: 'Lato' sans-serif;
+                color: $darkBlue;
+               //margin: 0 2px;
+            }
+           
+        }
+        
+
+    }
+    &__cvv {
+        margin-bottom: 1.5rem;;
+        padding-bottom: 0.5rem;
+        border-bottom: 1.2px solid $darkBlue;
+        .right {
+
+            display: flex;
+            label{
+                font-size: 1rem;
+                
+                margin-right: 40px;
+                color: $darkBlue;
+        
+            }
+            input{
+                text-align: center;
+                width: 50px;
+                font-family: 'Lato' sans-serif;
+                cursor: pointer;
+                background: transparent;
+                border: none;
+                outline: none;
+                color: $darkBlue;
+                margin-right: 20px;
+            }
+            input::placeholder{
+                font-family: 'Lato' sans-serif;
+                color: $darkBlue;
+            }
+            span {
+                text-align: center;
+                display: inline-block;
+                font-family: 'Lato' sans-serif;
+                cursor: pointer;
+                margin-left: 50px;
+                color: $darkBlue;
+                width: 24px;
+                height: 24px;
+                border: 2px solid $darkBlue;
+                border-radius: 50%;
+            }
+        }
+    }
+    &__cost {
+        text-align: center;
+    }
+
+}
+
+
+/*
+ <div class="pay__paypal">
+                    <div class="left">
+                        <input id="pp" type="radio" name="payment" />
+                        <div class="radio"></div>
+                        <label for="pp">Paypal</label>
+                    </div>
+                    <div class="right">
+                        <img src="../images/paypal.png" alt="paypal">
+                    </div>
+                    
+                </div>
+                */
+
+

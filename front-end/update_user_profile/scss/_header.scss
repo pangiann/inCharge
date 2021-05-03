@@ -1,0 +1,73 @@
+
+.container {
+    padding-top: 2.2rem;
+    padding-bottom: 2rem;
+}
+
+.header {
+    
+    &__flex {
+        display: flex;
+        
+    }
+    &__top {
+        padding-top: 0.5rem;
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+        //justify-content: center;
+        align-items: center;
+        #not {
+            margin-right: 1rem;
+            margin-left: 1rem;
+            
+
+        }
+        #yes {
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+        svg {
+            height: 35px;
+            width: 40px;
+            .not {
+                fill: #ccc;
+            }
+
+        }
+        p {
+            margin: 0;
+            text-align: center;
+            color: white;
+        }
+    }
+   
+    &__pic {
+        background-image: url('../../images/people-14-512.webp');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        flex: 1;
+        height: 154px;
+        width: 147px;
+        justify-self: center;
+        align-self: center;
+        
+    }
+
+    &__name {
+        h1 {
+            margin-bottom: 0;
+
+        }
+        flex: 1;
+        justify-content: center;
+        align-self: center;
+        margin-left: 2rem;
+        color: #eeeeee;
+        font-family: Verdana, Helvetica, sans-serif;
+        font-weight: 200;
+        
+
+    }
+}

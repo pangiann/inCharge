@@ -1,0 +1,126 @@
+"Point_No","Distributor_ID","Station_ID","Charging_Rate","Cost_per_KWh"
+"Station_1_1","DEDDIE","Station_1",0.2,0.03
+"Station_1_2","DEDDIE","Station_1",0.2,0.03
+"Station_1_3","ELPEDISON","Station_1",0.17,0.03
+"Station_1_4","Volterra AE","Station_1",0.17,0.03
+"Station_1_5","Protergia","Station_1",0.17,0.03
+"Station_10_1","DEDDIE","Station_10",0.17,0.03
+"Station_10_2","PROMETHEUS GAS","Station_10",0.2,0.04
+"Station_10_3","Volton","Station_10",0.2,0.04
+"Station_10_4","Volterra AE","Station_10",0.17,0.03
+"Station_10_5","Volterra AE","Station_10",0.2,0.03
+"Station_11_1","ELPEDISON","Station_11",0.2,0.03
+"Station_11_2","DEDDIE","Station_11",0.2,0.03
+"Station_11_3","Protergia","Station_11",0.2,0.04
+"Station_11_4","ELPEDISON","Station_11",0.17,0.04
+"Station_11_5","WATT+VOLT","Station_11",0.2,0.03
+"Station_12_1","Protergia","Station_12",0.2,0.03
+"Station_12_2","PROMETHEUS GAS","Station_12",0.2,0.03
+"Station_12_3","DEDDIE","Station_12",0.2,0.03
+"Station_12_4","Volterra AE","Station_12",0.2,0.02
+"Station_12_5","ELPEDISON","Station_12",0.2,0.03
+"Station_13_1","ZeniΘ","Station_13",0.2,0.02
+"Station_13_2","WATT+VOLT","Station_13",0.17,0.02
+"Station_13_3","ELPEDISON","Station_13",0.17,0.03
+"Station_13_4","DEDDIE","Station_13",0.17,0.03
+"Station_13_5","Volterra AE","Station_13",0.17,0.04
+"Station_14_1","Protergia","Station_14",0.17,0.03
+"Station_14_2","PROMETHEUS GAS","Station_14",0.2,0.03
+"Station_14_3","WATT+VOLT","Station_14",0.17,0.04
+"Station_14_4","DEDDIE","Station_14",0.17,0.03
+"Station_14_5","Volterra AE","Station_14",0.2,0.04
+"Station_15_1","ELPEDISON","Station_15",0.2,0.02
+"Station_15_2","WATT+VOLT","Station_15",0.2,0.02
+"Station_15_3","ZeniΘ","Station_15",0.2,0.02
+"Station_15_4","Protergia","Station_15",0.17,0.03
+"Station_15_5","ELPEDISON","Station_15",0.17,0.03
+"Station_16_1","Volterra AE","Station_16",0.17,0.03
+"Station_16_2","DEDDIE","Station_16",0.17,0.03
+"Station_16_3","WATT+VOLT","Station_16",0.2,0.04
+"Station_16_4","Volton","Station_16",0.2,0.04
+"Station_16_5","ELPEDISON","Station_16",0.17,0.02
+"Station_17_1","ELPEDISON","Station_17",0.2,0.03
+"Station_17_2","PROMETHEUS GAS","Station_17",0.2,0.03
+"Station_17_3","Protergia","Station_17",0.17,0.03
+"Station_17_4","Protergia","Station_17",0.17,0.03
+"Station_17_5","DEDDIE","Station_17",0.2,0.03
+"Station_18_1","ZeniΘ","Station_18",0.2,0.04
+"Station_18_2","Volton","Station_18",0.17,0.04
+"Station_18_3","WATT+VOLT","Station_18",0.17,0.03
+"Station_18_4","DEDDIE","Station_18",0.17,0.03
+"Station_18_5","PROMETHEUS GAS","Station_18",0.2,0.03
+"Station_19_1","ZeniΘ","Station_19",0.17,0.04
+"Station_19_2","DEDDIE","Station_19",0.17,0.03
+"Station_19_3","PROMETHEUS GAS","Station_19",0.2,0.03
+"Station_19_4","ELPEDISON","Station_19",0.2,0.03
+"Station_19_5","Volterra AE","Station_19",0.2,0.04
+"Station_2_1","WATT+VOLT","Station_2",0.17,0.03
+"Station_2_2","Volterra AE","Station_2",0.17,0.03
+"Station_2_3","DEDDIE","Station_2",0.2,0.03
+"Station_2_4","ZeniΘ","Station_2",0.17,0.04
+"Station_2_5","Protergia","Station_2",0.2,0.03
+"Station_20_1","DEDDIE","Station_20",0.2,0.02
+"Station_20_2","WATT+VOLT","Station_20",0.2,0.03
+"Station_20_3","WATT+VOLT","Station_20",0.2,0.03
+"Station_20_4","Protergia","Station_20",0.2,0.04
+"Station_20_5","PROMETHEUS GAS","Station_20",0.2,0.04
+"Station_21_1","DEDDIE","Station_21",0.17,3.0
+"Station_21_2","Protergia","Station_21",0.2,3.0
+"Station_21_3","ZeniΘ","Station_21",0.17,5.0
+"Station_21_4","Volton","Station_21",0.2,3.0
+"Station_21_5","PROMETHEUS GAS","Station_21",0.2,4.0
+"Station_22_1","DEDDIE","Station_22",0.17,0.03
+"Station_22_2","Volterra AE","Station_22",0.2,0.04
+"Station_22_3","WATT+VOLT","Station_22",0.17,0.03
+"Station_22_4","ELPEDISON","Station_22",0.17,0.03
+"Station_22_5","PROMETHEUS GAS","Station_22",0.17,0.03
+"Station_23_1","ZeniΘ","Station_23",0.2,0.03
+"Station_23_2","DEDDIE","Station_23",0.17,0.03
+"Station_23_3","Protergia","Station_23",0.2,0.04
+"Station_23_4","ELPEDISON","Station_23",0.17,0.04
+"Station_23_5","Volton","Station_23",0.2,0.04
+"Station_24_1","Volterra AE","Station_24",0.2,0.04
+"Station_24_2","DEDDIE","Station_24",0.17,0.03
+"Station_24_3","WATT+VOLT","Station_24",0.2,0.03
+"Station_24_4","PROMETHEUS GAS","Station_24",0.2,0.03
+"Station_24_5","ZeniΘ","Station_24",0.17,0.04
+"Station_25_1","Protergia","Station_25",0.2,0.03
+"Station_25_2","ELPEDISON","Station_25",0.2,0.04
+"Station_25_3","WATT+VOLT","Station_25",0.17,0.04
+"Station_25_4","DEDDIE","Station_25",0.17,0.03
+"Station_25_5","Volton","Station_25",0.2,0.04
+"Station_3_1","DEDDIE","Station_3",0.17,0.03
+"Station_3_2","DEDDIE","Station_3",0.2,0.03
+"Station_3_3","Volterra AE","Station_3",0.17,0.03
+"Station_3_4","DEDDIE","Station_3",0.17,0.03
+"Station_3_5","Protergia","Station_3",0.2,0.03
+"Station_4_1","DEDDIE","Station_4",0.2,0.03
+"Station_4_2","ELPEDISON","Station_4",0.17,0.03
+"Station_4_3","WATT+VOLT","Station_4",0.17,0.04
+"Station_4_4","Protergia","Station_4",0.2,0.03
+"Station_4_5","WATT+VOLT","Station_4",0.17,0.04
+"Station_5_1","DEDDIE","Station_5",0.17,0.03
+"Station_5_2","Volterra AE","Station_5",0.17,0.04
+"Station_5_3","DEDDIE","Station_5",0.17,0.03
+"Station_5_4","PROMETHEUS GAS","Station_5",0.2,0.03
+"Station_5_5","Volton","Station_5",0.2,0.03
+"Station_6_1","ZeniΘ","Station_6",0.2,0.02
+"Station_6_2","ELPEDISON","Station_6",0.2,0.03
+"Station_6_3","WATT+VOLT","Station_6",0.2,0.03
+"Station_6_4","DEDDIE","Station_6",0.17,0.03
+"Station_6_5","WATT+VOLT","Station_6",0.17,0.03
+"Station_7_1","Protergia","Station_7",0.2,0.03
+"Station_7_2","DEDDIE","Station_7",0.17,0.03
+"Station_7_3","DEDDIE","Station_7",0.17,0.03
+"Station_7_4","PROMETHEUS GAS","Station_7",0.17,0.03
+"Station_7_5","ZeniΘ","Station_7",0.2,0.04
+"Station_8_1","Volterra AE","Station_8",0.17,0.0
+"Station_8_2","PROMETHEUS GAS","Station_8",0.2,0.0
+"Station_8_3","WATT+VOLT","Station_8",0.2,0.0
+"Station_8_4","ZeniΘ","Station_8",0.17,0.0
+"Station_8_5","DEDDIE","Station_8",0.17,0.0
+"Station_9_1","DEDDIE","Station_9",0.2,0.03
+"Station_9_2","PROMETHEUS GAS","Station_9",0.2,0.03
+"Station_9_3","Volton","Station_9",0.17,0.02
+"Station_9_4","Protergia","Station_9",0.17,0.03
+"Station_9_5","WATT+VOLT","Station_9",0.2,0.03

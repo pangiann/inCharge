@@ -1,0 +1,12 @@
+[{"Subscription_No":1, "Customer_ID":"michalakos", "Supplier_ID":"WATT+VOLT", "Price":8.49, "Last_paid":"2021-03-06", "Last_issued":"2021-03-02"},
+ {"Subscription_No":2, "Customer_ID":"pangiann", "Supplier_ID":"ELPEDISON", "Price":7.99, "Last_paid":"2021-03-06", "Last_issued":"2021-03-01"},
+ {"Subscription_No":3, "Customer_ID":"Pantelis_G", "Supplier_ID":"WATT+VOLT", "Price":8.49, "Last_paid":"2021-03-08", "Last_issued":"2021-03-02"},
+ {"Subscription_No":4, "Customer_ID":"geosotos", "Supplier_ID":"PROMETHEUS GAS", "Price":8.49, "Last_paid":"2021-03-03", "Last_issued":"2021-03-03"},
+ {"Subscription_No":5, "Customer_ID":"vintere", "Supplier_ID":"DEDDIE", "Price":7.99, "Last_paid":"2021-02-27", "Last_issued":"2021-03-02"},
+ {"Subscription_No":6, "Customer_ID":"vasoulis", "Supplier_ID":"Protergia", "Price":7.99, "Last_paid":"2021-03-05", "Last_issued":"2021-03-01"},
+ {"Subscription_No":7, "Customer_ID":"17spyros42", "Supplier_ID":"Volton", "Price":8.1, "Last_paid":"2021-02-23", "Last_issued":"2021-03-01"},
+ {"Subscription_No":8, "Customer_ID":"trigonopsaroulis", "Supplier_ID":"WATT+VOLT", "Price":8.49, "Last_paid":"2021-02-28", "Last_issued":"2021-03-02"},
+ {"Subscription_No":9, "Customer_ID":"froutotrela", "Supplier_ID":"ELPEDISON", "Price":7.99, "Last_paid":"2021-02-15", "Last_issued":"2021-03-01"},
+ {"Subscription_No":10, "Customer_ID":"nikolakisXD", "Supplier_ID":"DEDDIE", "Price":7.99, "Last_paid":"2021-03-03", "Last_issued":"2021-03-02"},
+ {"Subscription_No":11, "Customer_ID":"kosmolagnos", "Supplier_ID":"ELPEDISON", "Price":7.99, "Last_paid":"2021-02-25", "Last_issued":"2021-03-01"},
+ {"Subscription_No":12, "Customer_ID":"dragonball", "Supplier_ID":"WATT+VOLT", "Price":8.49, "Last_paid":"2021-02-17", "Last_issued":"2021-03-02"}]
